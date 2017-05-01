@@ -9,6 +9,15 @@ namespace Engine.ViewModels
 {
     class GameSession
     {
+        //Property 
         Player CurrentPlayer { get; set; }
+
+        //constructor 
+        public GameSession()
+        {
+            CurrentPlayer = new Player();
+            CurrentPlayer.Name = "Jeremy";
+            CurrentPlayer.Gold = 1000000;
+        }
     }
 }
