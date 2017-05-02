@@ -11,6 +11,7 @@ namespace Engine.ViewModels
     {
         //Property 
         public Player CurrentPlayer { get; set; }
+        public Location CurrentLocaton { get; set; }
 
         //constructor 
         public GameSession()
@@ -22,6 +23,12 @@ namespace Engine.ViewModels
             CurrentPlayer.Gold = 1000000;
             CurrentPlayer.ExperiencePoints = 0;
             CurrentPlayer.Level = 1;
+
+            CurrentLocaton = new Location();
+            CurrentLocaton.Name = "Home";
+            CurrentLocaton.XCoordinate = 0;
+            CurrentLocaton.YCoordinate = -1;
+            CurrentLocaton.Description = "This is your house.";
         }
     }
 }
