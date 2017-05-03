@@ -11,7 +11,8 @@ namespace Engine.ViewModels
     {
         //Property 
         public Player CurrentPlayer { get; set; }
-        public Location CurrentLocaton { get; set; }
+        public Location CurrentLocation { get; set; }
+        public World CurrentWorld { get; set; }
 
         //constructor 
         public GameSession()
@@ -24,11 +25,14 @@ namespace Engine.ViewModels
             CurrentPlayer.ExperiencePoints = 0;
             CurrentPlayer.Level = 1;
 
-            CurrentLocaton = new Location();
-            CurrentLocaton.Name = "Home";
-            CurrentLocaton.XCoordinate = 0;
-            CurrentLocaton.YCoordinate = -1;
-            CurrentLocaton.Description = "This is your house.";
+            CurrentLocation = new Location();
+            CurrentLocation.Name = "Home";
+            CurrentLocation.XCoordinate = 0;
+            CurrentLocation.YCoordinate = -1;
+            CurrentLocation.Description = "This is your house";
+            CurrentLocation.ImageName = "/Engine;component/Images/Locations/Home.png";
+
+            CurrentWorld = new World();
         }
     }
 }
