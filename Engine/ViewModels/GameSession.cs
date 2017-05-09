@@ -13,7 +13,7 @@ namespace Engine.ViewModels
     {
         //Property 
         private Location _currentLocation;
-
+        
         public Player CurrentPlayer { get; set; }
         public Location CurrentLocation
         {
@@ -21,7 +21,7 @@ namespace Engine.ViewModels
             set
             {
                 _currentLocation = value;
-
+            
                 OnPropertyChanged(nameof(CurrentLocation));
                 OnPropertyChanged(nameof(HasLocationToNorth));
                 OnPropertyChanged(nameof(HasLocationToEast));
